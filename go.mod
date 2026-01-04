@@ -1,4 +1,4 @@
-module github.com/zemld/rcm
+module github.com/zemld/config-manager
 
 go 1.25.1
 

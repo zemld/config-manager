@@ -49,6 +49,8 @@ func NewRedisConfigManager(serviceName string, redisOptions *redis.Options) cm.C
 func (rcm *RedisConfigManager) StartLoading(interval time.Duration) {
 	rcm.wg.Add(1)
 
+	rcm.LoadConfig(rcm.ctx)
+
 	go func() {
 		defer rcm.wg.Done()
 
